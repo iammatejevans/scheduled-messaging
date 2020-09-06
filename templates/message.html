@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scheduled messenger</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="/static/script.js"></script>
+</head>
+<body>
+
+
+    <div style="margin:1rem; max-width:300px;">
+
+        <h1 style="font-size:1.5rem;margin-bottom:2rem;">Send a scheduled message</h1>
+
+        <div id="success" class="alert alert-success" role="alert" style="display:none;">
+            Your message was added to queue successfully
+        </div>
+        <div id="failure" class="alert alert-danger" role="alert" style="display:none;"></div>
+        <div id="warning" class="alert alert-warning" role="alert" style="display:none;"></div>
+
+        <form>
+            <div class="form-group">
+                <input type="email" class="form-control" id="emailInput" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="passwordInput" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="recipientInput" placeholder="Reciever" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="contentInput" placeholder="Your message" required>
+            </div>
+            <div class="form-group">
+                <label for="timeInput">When should the message be sent?</label>
+                <input type="datetime-local" class="form-control" id="timeInput">
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="groupCheck">
+                <label class="form-check-label" for="groupCheck">Reciever is a group conversation</label>
+            </div>
+            <button type="button" class="btn btn-primary" id="sendMessageSubmit" style="margin-top:2rem;">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
